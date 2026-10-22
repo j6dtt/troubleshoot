@@ -1,4 +1,4 @@
-  sed -i "s/&docker-gid \"[0-9]*\"/\&docker-gid \"$(stat -c %g /var/run/docker.sock)\"/" docker-compose.yml
-  sudo chown -R "$(id -u):$(id -g)" signal-data
-  docker compose up -d signal monitor container-facts
-  docker compose logs -f
+sed -i "s/&docker-gid \"[0-9]*\"/\&docker-gid \"$(stat -c %g /var/run/docker.sock)\"/" docker-compose.yml
+sudo chown -R "$(id -u):$(id -g)" signal-data
+docker compose up -d signal monitor container-facts
+docker compose logs -f
