@@ -2,3 +2,6 @@ sed -i "s/&docker-gid \"[0-9]*\"/\&docker-gid \"$(stat -c %g /var/run/docker.soc
 sudo chown -R "$(id -u):$(id -g)" signal-data
 docker compose up -d signal monitor container-facts
 docker compose logs -f
+
+
+ WARNING Lost the connection to signal-cli ([Errno 8] EOF occurred in violation of protocol (_ssl.c:2660)). Reconnecting in 3 seconds...
